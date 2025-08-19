@@ -1,0 +1,24 @@
+{
+  "track_name": "Spanish",
+  "total_laps": 66,
+  "estimated_race_time_seconds": 5856.106452901336,
+  "estimated_race_time_minutes": 97.6,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with MEDIUM -> Lap 13 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 13,
+      "stint_length": 13
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 14,
+      "end_lap": 66,
+      "stint_length": 53
+    }
+  ]
+}

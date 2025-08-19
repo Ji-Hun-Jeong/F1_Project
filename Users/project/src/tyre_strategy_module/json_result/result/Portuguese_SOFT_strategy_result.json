@@ -1,0 +1,24 @@
+{
+  "track_name": "Portuguese",
+  "total_laps": 66,
+  "estimated_race_time_seconds": 5891.662290814291,
+  "estimated_race_time_minutes": 98.19,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 13 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 13,
+      "stint_length": 13
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 14,
+      "end_lap": 66,
+      "stint_length": 53
+    }
+  ]
+}

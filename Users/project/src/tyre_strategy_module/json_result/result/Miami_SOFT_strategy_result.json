@@ -1,0 +1,31 @@
+{
+  "track_name": "Miami",
+  "total_laps": 57,
+  "estimated_race_time_seconds": 7153.918856789868,
+  "estimated_race_time_minutes": 119.23,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with SOFT -> Lap 10 PIT to HARD -> Lap 44 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 10,
+      "stint_length": 10
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 11,
+      "end_lap": 44,
+      "stint_length": 34
+    },
+    {
+      "stint_number": 3,
+      "compound": "HARD",
+      "start_lap": 45,
+      "end_lap": 57,
+      "stint_length": 13
+    }
+  ]
+}

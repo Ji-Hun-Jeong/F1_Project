@@ -1,0 +1,31 @@
+{
+  "track_name": "Turkish",
+  "total_laps": 58,
+  "estimated_race_time_seconds": 5866.391635751789,
+  "estimated_race_time_minutes": 97.77,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with MEDIUM -> Lap 11 PIT to HARD -> Lap 43 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 11,
+      "stint_length": 11
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 12,
+      "end_lap": 43,
+      "stint_length": 32
+    },
+    {
+      "stint_number": 3,
+      "compound": "HARD",
+      "start_lap": 44,
+      "end_lap": 58,
+      "stint_length": 15
+    }
+  ]
+}

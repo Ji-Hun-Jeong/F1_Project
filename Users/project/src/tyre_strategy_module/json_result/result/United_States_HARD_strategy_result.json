@@ -1,0 +1,24 @@
+{
+  "track_name": "United_States",
+  "total_laps": 56,
+  "estimated_race_time_seconds": 6487.0346065156,
+  "estimated_race_time_minutes": 108.12,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 42 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 42,
+      "stint_length": 42
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 43,
+      "end_lap": 56,
+      "stint_length": 14
+    }
+  ]
+}

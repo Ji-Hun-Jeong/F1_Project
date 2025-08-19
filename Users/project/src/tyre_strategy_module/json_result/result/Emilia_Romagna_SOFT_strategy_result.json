@@ -1,0 +1,24 @@
+{
+  "track_name": "Emilia_Romagna",
+  "total_laps": 63,
+  "estimated_race_time_seconds": 5885.365202897673,
+  "estimated_race_time_minutes": 98.09,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 9 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 9,
+      "stint_length": 9
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 10,
+      "end_lap": 63,
+      "stint_length": 54
+    }
+  ]
+}

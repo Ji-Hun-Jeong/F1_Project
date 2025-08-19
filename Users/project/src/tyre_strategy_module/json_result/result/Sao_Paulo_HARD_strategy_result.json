@@ -1,0 +1,24 @@
+{
+  "track_name": "Sao_Paulo",
+  "total_laps": 71,
+  "estimated_race_time_seconds": 6479.558991522261,
+  "estimated_race_time_minutes": 107.99,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 58 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 58,
+      "stint_length": 58
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 59,
+      "end_lap": 71,
+      "stint_length": 13
+    }
+  ]
+}

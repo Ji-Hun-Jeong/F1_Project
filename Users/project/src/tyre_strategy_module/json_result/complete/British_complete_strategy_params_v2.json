@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "track": "British",
+    "version": "2.0",
+    "description": "British GP F1 strategy simulation parameters with Dry/Wet separation.",
+    "created_at": "2025-08-13T07:42:57.994125"
+  },
+  "dry_strategy_params": {
+    "description": "Parameters for when Rainfall is 0. Uses ML-based predictions.",
+    "ml_hyper_parameters": {
+      "n_estimators": 372,
+      "max_depth": 8,
+      "learning_rate": 0.24890856806970885,
+      "subsample": 0.7888415397048993,
+      "colsample_bytree": 0.5782888655111521,
+      "gamma": 2.4145581155549816,
+      "reg_alpha": 0.7262735819714046,
+      "reg_lambda": 0.042122040457799104,
+      "scale_pos_weight": 3.927572942367756
+    },
+    "pit_proba_threshold": 0.33382001519203186,
+    "TyreLife_threshold": 20.0,
+    "pit_stop_time": 30.139149999999997,
+    "compound_performance": {
+      "SOFT": {
+        "base_pace": 1.0,
+        "degradation_rate": 0.08,
+        "optimal_stint": 19,
+        "min_stint": 8,
+        "temp_threshold": 31.211111111111112
+      },
+      "MEDIUM": {
+        "base_pace": 0.98,
+        "degradation_rate": 0.0721298511414688,
+        "optimal_stint": 20,
+        "min_stint": 8,
+        "temp_threshold": 31.211111111111112
+      },
+      "HARD": {
+        "base_pace": 0.96,
+        "degradation_rate": 0.05050649203796449,
+        "optimal_stint": 23,
+        "min_stint": 8,
+        "temp_threshold": 27.166666666666668
+      }
+    }
+  },
+  "wet_strategy_params": {
+    "description": "Parameters for when Rainfall is 1. Uses rule-based logic.",
+    "strategy_rule": "When rainfall begins, recommend immediate pit for INTERMEDIATE tires.",
+    "pit_stop_time": 29.821749999999998,
+    "compound_performance": {
+      "INTERMEDIATE": {
+        "base_pace": 0.85,
+        "degradation_rate": 0.08,
+        "optimal_stint": 20,
+        "min_stint": 5,
+        "temp_threshold": 21.28888888888889
+      },
+      "WET": {
+        "base_pace": 0.75,
+        "degradation_rate": 0.08,
+        "optimal_stint": 12,
+        "min_stint": 5,
+        "temp_threshold": 20.645
+      }
+    }
+  }
+}

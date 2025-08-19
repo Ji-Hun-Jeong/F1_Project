@@ -1,0 +1,31 @@
+{
+  "track_name": "Sakhir",
+  "total_laps": 87,
+  "estimated_race_time_seconds": 6423.3854396691995,
+  "estimated_race_time_minutes": 107.06,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with HARD -> Lap 38 PIT to HARD -> Lap 74 PIT to SOFT -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 38,
+      "stint_length": 38
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 39,
+      "end_lap": 74,
+      "stint_length": 36
+    },
+    {
+      "stint_number": 3,
+      "compound": "SOFT",
+      "start_lap": 75,
+      "end_lap": 87,
+      "stint_length": 13
+    }
+  ]
+}

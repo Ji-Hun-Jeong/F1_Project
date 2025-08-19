@@ -11,6 +11,10 @@ class FolderAccess:
     
     def get_all_file(self):
         pass
+
+    def get_file_by_data_frame(self, file_name: str) -> pd.DataFrame:
+        pass
+
     def read_csv_by_data_frame(self, file_name: str) -> pd.DataFrame:
         pass
 
@@ -27,6 +31,19 @@ class AzureStorageAccess(FolderAccess):
     def get_all_file(self):
         # 3) 모든 blob 목록 가져오기
         return self.container_client.list_blobs()
+
+    def get_file_by_data_frame(self, file_name: str) -> pd.DataFrame:
+        blob_client = self.container_client.get_blob_client(file_name)
+        stream = blob_client.download_blob()
+        content = stream.readall()
+
+        try:
+            df = pd.read_csv(io.BytesIO(content))
+            return df
+        except Exception as e:
+            print(f"{file_name} 읽기 실패: {e}")
+            return pd.DataFrame()
+
 
     def read_csv_by_data_frame(self, file_name: str) -> pd.DataFrame:
         try:

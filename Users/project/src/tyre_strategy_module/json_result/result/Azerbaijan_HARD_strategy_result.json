@@ -1,0 +1,24 @@
+{
+  "track_name": "Azerbaijan",
+  "total_laps": 51,
+  "estimated_race_time_seconds": 7152.469803565813,
+  "estimated_race_time_minutes": 119.21,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 41 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 41,
+      "stint_length": 41
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 42,
+      "end_lap": 51,
+      "stint_length": 10
+    }
+  ]
+}
