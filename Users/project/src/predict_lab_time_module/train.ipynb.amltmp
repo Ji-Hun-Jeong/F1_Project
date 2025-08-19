@@ -1,0 +1,75 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "%load_ext autoreload\n",
+        "%autoreload 2\n",
+        "from Users.project.predict_lab_time_module.predict_lap_time import PredictLapTime\n",
+        "import torch\n",
+        "\n",
+        "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n",
+        "print(device)\n",
+        "\n",
+        "predict_lap_time_module = PredictLapTime(device)\n",
+        "predict_lap_time_module.train()\n",
+        "predict_lap_time_module.decide_greatest_model()\n",
+        "predict_lap_time_module.save_all_track_greatest_models()"
+      ],
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1753626946554
+        }
+      },
+      "id": "3c8b21ab"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%load_ext autoreload\n",
+        "%autoreload 2\n"
+      ],
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {},
+      "id": "a31bdeab"
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {},
+      "id": "137d7b3d"
+    }
+  ],
+  "metadata": {
+    "kernel_info": {
+      "name": "python38-azureml"
+    },
+    "kernelspec": {
+      "name": "python38-azureml",
+      "language": "python",
+      "display_name": "Python 3.10 - AzureML"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.10.11",
+      "mimetype": "text/x-python",
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "pygments_lexer": "ipython3",
+      "nbconvert_exporter": "python",
+      "file_extension": ".py"
+    },
+    "nteract": {
+      "version": "nteract-front-end@1.0.0"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
