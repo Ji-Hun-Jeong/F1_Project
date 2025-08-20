@@ -19,8 +19,6 @@ async def predict_lap_time(predict_data: dict):
     return {"message": predict_data}
 
 
-
-
 def sanitize_json(obj):
     return {
         k: (None if isinstance(v, float) and np.isnan(v) else v) for k, v in obj.items()
