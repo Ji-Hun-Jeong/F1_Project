@@ -1,7 +1,7 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from response_data import router  # routes.py에서 router 가져오기
+from .response_data import router
 
 app = FastAPI()
 
