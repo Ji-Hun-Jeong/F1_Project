@@ -2,6 +2,7 @@ from fastapi import FastAPI, WebSocket
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from .response_data import router
+from .tyre_data import tyre_router
 
 # 루트 폴더로 이동후
 # uvicorn Users.project.src.server.main:app --reload --port=8096 --host=0.0.0.0
@@ -19,6 +20,7 @@ app.add_middleware(
 
 # 라우터 등록
 app.include_router(router)
+app.include_router(tyre_router)
 
 @app.get("/")
 def gd():
