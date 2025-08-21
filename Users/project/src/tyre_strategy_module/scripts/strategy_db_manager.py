@@ -157,6 +157,7 @@ def get_strategy_as_json(track_name, starting_compound, db_url):
         first_row = results[0]
         strategy_dict = {
             "track_name": track_name,
+            "starting_compound": starting_compound,
             "total_laps": first_row[0],
             "estimated_race_time_seconds": first_row[1],
             "estimated_race_time_minutes": round(first_row[1] / 60, 2),
@@ -182,6 +183,31 @@ def get_strategy_as_json(track_name, starting_compound, db_url):
         if con and cur:
             DBManager.closeConCur(con, cur)
             print("DB 연결을 종료합니다.")
+
+
+def get_all_track_names(db_url: str) -> list | None:
+    """데이터베이스에서 전략이 저장된 모든 트랙의 고유한 목록을 조회하여 리스트로 반환합니다."""
+    con, cur = None, None
+    try:
+        con, cur = DBManager.makeConCur(db_url)
+        
+        # RACE_STRATEGIES 테이블에서 중복 없이 트랙 이름만 조회하고 알파벳순으로 정렬합니다.
+        sql = "SELECT DISTINCT track_name FROM RACE_STRATEGIES ORDER BY track_name ASC"
+        
+        cur.execute(sql)
+        
+        # cur.fetchall()의 결과는 [('Abu_Dhabi',), ('Australian',)] 같은 튜플의 리스트입니다.
+        # 이를 ['Abu_Dhabi', 'Australian'] 형태의 문자열 리스트로 변환합니다.
+        results = [row[0] for row in cur.fetchall()]
+        
+        return results
+
+    except Exception as e:
+        print(f"DB에서 트랙 목록 조회 중 오류가 발생했습니다: {e}")
+        return None # 오류 발생 시 None 반환
+    finally:
+        if con and cur:
+            DBManager.closeConCur(con, cur)
 
 
 def run_bulk_insertion(json_folder_path):
