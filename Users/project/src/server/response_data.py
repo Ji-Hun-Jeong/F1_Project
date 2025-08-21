@@ -53,7 +53,7 @@ async def predict_lap_time(request: Request):
             logger.clear_log()
         except Exception as e:
             print(e)
-            return JSONResponse({"success": False, "error": e})
+            return JSONResponse({"success": False, "error": str(e)})
         return JSONResponse({"success": False, "result": log})
     else:
         return JSONResponse({"success": True})
