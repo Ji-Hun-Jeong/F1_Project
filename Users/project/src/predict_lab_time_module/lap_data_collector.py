@@ -56,9 +56,9 @@ def get_laps_data_feature(row: pd.DataFrame) -> list[float]:
     stint = row.Stint
     tyre_life = row.TyreLife
     lap_number = row.LapNumber
-    sector1_time = pd.to_timedelta(row.Sector1Time).total_seconds()
-    sector2_time = pd.to_timedelta(row.Sector2Time).total_seconds()
-    sector3_time = pd.to_timedelta(row.Sector3Time).total_seconds()
+    sector1_time = pd.to_timedelta(row.Sector1Time).dt.total_seconds()
+    sector2_time = pd.to_timedelta(row.Sector2Time).dt.total_seconds()
+    sector3_time = pd.to_timedelta(row.Sector3Time).dt.total_seconds()
     compound = row.Compound
     fresh_tyre = row.FreshTyre
     track_status = int(row.TrackStatus)
