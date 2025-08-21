@@ -15,6 +15,7 @@ def get_car_data_feature(data_frame: pd.DataFrame) -> list[float]:
     drs_datas = data_frame["DRS"]
     # 피처 리스트 초기화
     features = []
+
     # 1. RPM 피처
     features.append(rpm_datas.mean())  # 평균 RPM
     features.append(rpm_datas.max())   # 최대 RPM
@@ -53,17 +54,20 @@ def get_car_data_feature(data_frame: pd.DataFrame) -> list[float]:
     return features
 
 def get_laps_data_feature(row: pd.DataFrame) -> list[float]:
-    stint = row.Stint
+    stint = row["Stint"]
     tyre_life = row.TyreLife
     lap_number = row.LapNumber
-    sector1_time = pd.to_timedelta(row.Sector1Time).dt.total_seconds()
-    sector2_time = pd.to_timedelta(row.Sector2Time).dt.total_seconds()
-    sector3_time = pd.to_timedelta(row.Sector3Time).dt.total_seconds()
-    compound = row.Compound
+    # sector1_time = pd.to_timedelta(row["Sector1Time"]).iloc[0].total_seconds()
+    # sector2_time = pd.to_timedelta(row["Sector2Time"]).iloc[0].total_seconds()
+    # sector3_time = pd.to_timedelta(row["Sector3Time"]).iloc[0].total_seconds()
+    sector1_time = pd.to_timedelta(row.Sector1Time).total_seconds()
+    sector2_time = pd.to_timedelta(row.Sector2Time).total_seconds()
+    sector3_time = pd.to_timedelta(row.Sector3Time).total_seconds()
     fresh_tyre = row.FreshTyre
-    track_status = int(row.TrackStatus)
+    track_status =  row["TrackStatus"]
     features = []
     # 타이어 상태 원핫인코딩
+    compound = row["Compound"]
     tyre_mapping = {"SOFT": [1, 0, 0], "MEDIUM": [0, 1, 0], "HARD": [0, 0, 1]}
     compound_encoded = tyre_mapping.get(compound, [1, 0, 0])  # 알 수 없는 타이어는 [0,0,0]
     track_flags = []
@@ -103,7 +107,6 @@ class LapDataCollector:
             self.car_data_frame = car_data_frame
         else:
             self.car_data_frame = pd.concat([self.car_data_frame, car_data_frame], ignore_index=True)
-        print(self.car_data_frame)
         
     def get_feature_by_data_frame(self, laps_data_frame: pd.DataFrame, weather_data_frame: pd.DataFrame) -> pd.DataFrame:
         car_data_feature = get_car_data_feature(self.car_data_frame)
