@@ -2,67 +2,86 @@
   "metadata": {
     "track": "Eifel",
     "version": "2.0",
-    "description": "Eifel GP F1 strategy simulation parameters with Dry/Wet separation.",
-    "created_at": "2025-08-19T05:22:50.590795"
+    "total_laps": 60,
+    "created_at": "2025-08-20T03:21:50.506808"
+  },
+  "feature_medians": {
+    "LapNumber": 27.0,
+    "Stint": 2.0,
+    "SpeedI1": 263.0,
+    "SpeedI2": 225.0,
+    "SpeedFL": 248.0,
+    "SpeedST": 293.0,
+    "TyreLife": 11.0,
+    "Position": 9.0,
+    "TrackTemp": 16.1,
+    "AirTemp": 9.5,
+    "Humidity": 59.3,
+    "Pressure": 947.4,
+    "WindDirection": 61.0,
+    "WindSpeed": 1.6,
+    "LapTime_Delta": -0.01099999999999568,
+    "SpeedI1_Delta": 0.0,
+    "TyreWear_Rate": -0.03333333333333333,
+    "TyreWear": 35.0,
+    "Rainfall": 0.0
   },
   "dry_strategy_params": {
-    "description": "Parameters for when Rainfall is 0. Uses ML-based predictions.",
     "ml_hyper_parameters": {
-      "n_estimators": 430,
-      "max_depth": 6,
-      "learning_rate": 0.04668169418518457,
-      "subsample": 0.8728046815509303,
-      "colsample_bytree": 0.917285701150943,
-      "gamma": 0.49325121170053166,
-      "reg_alpha": 0.3243257373936236,
-      "reg_lambda": 0.5285610531878755,
-      "scale_pos_weight": 4.336923909514341
+      "n_estimators": 295,
+      "max_depth": 10,
+      "learning_rate": 0.07615815194807006,
+      "subsample": 0.7216955680855552,
+      "colsample_bytree": 0.850080725235495,
+      "gamma": 0.23808943302893348,
+      "reg_alpha": 0.7900789941105578,
+      "reg_lambda": 0.42920027691874074,
+      "scale_pos_weight": 4.766647017746483
     },
-    "pit_proba_threshold": 0.331455796957016,
+    "pit_proba_threshold": 0.08950179070234299,
     "TyreLife_threshold": 22.0,
+    "compound_choice_thresholds": {
+      "t1": 18.0,
+      "t2": 52,
+      "t3": 2,
+      "accuracy": 0.87
+    },
     "pit_stop_time": 23.256931034482754,
     "compound_performance": {
       "SOFT": {
         "base_pace": 1.0,
-        "degradation_rate": 0.06879055648267544,
-        "optimal_stint": 19,
-        "min_stint": 8,
-        "temp_threshold": 39.038888888888884
+        "degradation_rate": 0.035,
+        "optimal_stint": 21,
+        "min_stint": 8
       },
       "MEDIUM": {
         "base_pace": 0.98,
-        "degradation_rate": 0.04254555062520198,
-        "optimal_stint": 22,
-        "min_stint": 8,
-        "temp_threshold": 34.449999999999996
+        "degradation_rate": 0.022,
+        "optimal_stint": 24,
+        "min_stint": 8
       },
       "HARD": {
         "base_pace": 0.96,
-        "degradation_rate": 0.03357536329964401,
-        "optimal_stint": 23,
-        "min_stint": 8,
-        "temp_threshold": 39.038888888888884
+        "degradation_rate": 0.013,
+        "optimal_stint": 29,
+        "min_stint": 8
       }
     }
   },
   "wet_strategy_params": {
-    "description": "Parameters for when Rainfall is 1. Uses rule-based logic.",
-    "strategy_rule": "When rainfall begins, recommend immediate pit for INTERMEDIATE tires.",
     "pit_stop_time": 22.0,
     "compound_performance": {
       "INTERMEDIATE": {
         "base_pace": 0.85,
-        "degradation_rate": 0.08,
+        "degradation_rate": 0.045,
         "optimal_stint": 20,
-        "min_stint": 5,
-        "temp_threshold": 18.2
+        "min_stint": 5
       },
       "WET": {
         "base_pace": 0.75,
         "degradation_rate": 0.08,
         "optimal_stint": 12,
-        "min_stint": 5,
-        "temp_threshold": 26.4
+        "min_stint": 5
       }
     }
   }

@@ -1,0 +1,32 @@
+{
+  "track_name": "Sao_Paulo",
+  "initial_compound": "SOFT",
+  "total_laps": 71,
+  "estimated_race_time_seconds": 5964.161211456426,
+  "estimated_race_time_minutes": 99.4,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with SOFT -> Lap 11 PIT to HARD -> Lap 41 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 11,
+      "stint_length": 11
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 12,
+      "end_lap": 41,
+      "stint_length": 30
+    },
+    {
+      "stint_number": 3,
+      "compound": "HARD",
+      "start_lap": 42,
+      "end_lap": 71,
+      "stint_length": 30
+    }
+  ]
+}

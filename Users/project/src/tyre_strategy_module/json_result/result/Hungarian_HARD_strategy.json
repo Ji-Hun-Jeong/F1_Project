@@ -1,0 +1,25 @@
+{
+  "track_name": "Hungarian",
+  "initial_compound": "HARD",
+  "total_laps": 70,
+  "estimated_race_time_seconds": 5758.460383662476,
+  "estimated_race_time_minutes": 95.97,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 35 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 35,
+      "stint_length": 35
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 36,
+      "end_lap": 70,
+      "stint_length": 35
+    }
+  ]
+}

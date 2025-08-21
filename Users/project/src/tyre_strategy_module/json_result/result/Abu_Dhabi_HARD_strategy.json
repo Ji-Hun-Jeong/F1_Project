@@ -1,0 +1,25 @@
+{
+  "track_name": "Abu_Dhabi",
+  "initial_compound": "HARD",
+  "total_laps": 58,
+  "estimated_race_time_seconds": 5363.978837864023,
+  "estimated_race_time_minutes": 89.4,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 31 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 31,
+      "stint_length": 31
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 32,
+      "end_lap": 58,
+      "stint_length": 27
+    }
+  ]
+}

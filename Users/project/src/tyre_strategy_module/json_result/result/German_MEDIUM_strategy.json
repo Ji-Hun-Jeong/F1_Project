@@ -1,0 +1,25 @@
+{
+  "track_name": "German",
+  "initial_compound": "MEDIUM",
+  "total_laps": 67,
+  "estimated_race_time_seconds": 5259.235518365157,
+  "estimated_race_time_minutes": 87.65,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with MEDIUM -> Lap 33 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 33,
+      "stint_length": 33
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 34,
+      "end_lap": 67,
+      "stint_length": 34
+    }
+  ]
+}

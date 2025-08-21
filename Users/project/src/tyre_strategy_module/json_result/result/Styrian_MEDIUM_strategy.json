@@ -1,0 +1,25 @@
+{
+  "track_name": "Styrian",
+  "initial_compound": "MEDIUM",
+  "total_laps": 71,
+  "estimated_race_time_seconds": 4860.99465441611,
+  "estimated_race_time_minutes": 81.02,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with MEDIUM -> Lap 35 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 35,
+      "stint_length": 35
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 36,
+      "end_lap": 71,
+      "stint_length": 36
+    }
+  ]
+}

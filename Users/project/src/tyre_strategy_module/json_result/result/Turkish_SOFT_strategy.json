@@ -1,0 +1,32 @@
+{
+  "track_name": "Turkish",
+  "initial_compound": "SOFT",
+  "total_laps": 58,
+  "estimated_race_time_seconds": 5034.439130481733,
+  "estimated_race_time_minutes": 83.91,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with SOFT -> Lap 11 PIT to HARD -> Lap 35 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 11,
+      "stint_length": 11
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 12,
+      "end_lap": 35,
+      "stint_length": 24
+    },
+    {
+      "stint_number": 3,
+      "compound": "HARD",
+      "start_lap": 36,
+      "end_lap": 58,
+      "stint_length": 23
+    }
+  ]
+}

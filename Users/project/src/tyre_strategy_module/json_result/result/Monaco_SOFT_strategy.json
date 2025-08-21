@@ -1,0 +1,32 @@
+{
+  "track_name": "Monaco",
+  "initial_compound": "SOFT",
+  "total_laps": 78,
+  "estimated_race_time_seconds": 6034.055966650385,
+  "estimated_race_time_minutes": 100.57,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with SOFT -> Lap 14 PIT to HARD -> Lap 46 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 14,
+      "stint_length": 14
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 15,
+      "end_lap": 46,
+      "stint_length": 32
+    },
+    {
+      "stint_number": 3,
+      "compound": "HARD",
+      "start_lap": 47,
+      "end_lap": 78,
+      "stint_length": 32
+    }
+  ]
+}

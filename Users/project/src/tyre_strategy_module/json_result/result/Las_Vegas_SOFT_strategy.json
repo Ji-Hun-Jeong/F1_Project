@@ -1,0 +1,25 @@
+{
+  "track_name": "Las_Vegas",
+  "initial_compound": "SOFT",
+  "total_laps": 50,
+  "estimated_race_time_seconds": 5085.073414987939,
+  "estimated_race_time_minutes": 84.75,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 22 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 22,
+      "stint_length": 22
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 23,
+      "end_lap": 50,
+      "stint_length": 28
+    }
+  ]
+}

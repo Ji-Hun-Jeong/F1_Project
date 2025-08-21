@@ -1,0 +1,25 @@
+{
+  "track_name": "Singapore",
+  "initial_compound": "HARD",
+  "total_laps": 62,
+  "estimated_race_time_seconds": 6242.577632955154,
+  "estimated_race_time_minutes": 104.04,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 32 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 32,
+      "stint_length": 32
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 33,
+      "end_lap": 62,
+      "stint_length": 30
+    }
+  ]
+}

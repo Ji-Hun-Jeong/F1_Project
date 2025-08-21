@@ -1,0 +1,25 @@
+{
+  "track_name": "Chinese",
+  "initial_compound": "HARD",
+  "total_laps": 56,
+  "estimated_race_time_seconds": 5467.584235002007,
+  "estimated_race_time_minutes": 91.13,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 28 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 28,
+      "stint_length": 28
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 29,
+      "end_lap": 56,
+      "stint_length": 28
+    }
+  ]
+}

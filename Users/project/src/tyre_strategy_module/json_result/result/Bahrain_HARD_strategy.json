@@ -1,0 +1,25 @@
+{
+  "track_name": "Bahrain",
+  "initial_compound": "HARD",
+  "total_laps": 57,
+  "estimated_race_time_seconds": 5584.1257022710215,
+  "estimated_race_time_minutes": 93.07,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 29 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 29,
+      "stint_length": 29
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 30,
+      "end_lap": 57,
+      "stint_length": 28
+    }
+  ]
+}

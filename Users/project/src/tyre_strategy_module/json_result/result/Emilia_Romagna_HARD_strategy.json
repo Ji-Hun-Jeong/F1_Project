@@ -1,0 +1,25 @@
+{
+  "track_name": "Emilia_Romagna",
+  "initial_compound": "HARD",
+  "total_laps": 63,
+  "estimated_race_time_seconds": 5127.125140603296,
+  "estimated_race_time_minutes": 85.45,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 32 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 32,
+      "stint_length": 32
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 33,
+      "end_lap": 63,
+      "stint_length": 31
+    }
+  ]
+}

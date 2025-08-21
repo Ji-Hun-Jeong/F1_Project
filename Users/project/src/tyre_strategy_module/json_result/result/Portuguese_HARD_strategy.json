@@ -1,0 +1,25 @@
+{
+  "track_name": "Portuguese",
+  "initial_compound": "HARD",
+  "total_laps": 66,
+  "estimated_race_time_seconds": 5853.949883136365,
+  "estimated_race_time_minutes": 97.57,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 33 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 33,
+      "stint_length": 33
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 34,
+      "end_lap": 66,
+      "stint_length": 33
+    }
+  ]
+}

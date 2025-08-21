@@ -1,0 +1,25 @@
+{
+  "track_name": "Bahrain",
+  "initial_compound": "SOFT",
+  "total_laps": 57,
+  "estimated_race_time_seconds": 5638.484325192776,
+  "estimated_race_time_minutes": 93.97,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 17 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 17,
+      "stint_length": 17
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 18,
+      "end_lap": 57,
+      "stint_length": 40
+    }
+  ]
+}

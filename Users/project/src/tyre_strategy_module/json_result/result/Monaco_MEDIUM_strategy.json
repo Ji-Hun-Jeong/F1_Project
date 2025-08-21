@@ -1,0 +1,25 @@
+{
+  "track_name": "Monaco",
+  "initial_compound": "MEDIUM",
+  "total_laps": 78,
+  "estimated_race_time_seconds": 5995.532550965136,
+  "estimated_race_time_minutes": 99.93,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with MEDIUM -> Lap 37 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 37,
+      "stint_length": 37
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 38,
+      "end_lap": 78,
+      "stint_length": 41
+    }
+  ]
+}
