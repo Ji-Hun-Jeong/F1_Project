@@ -45,6 +45,7 @@ async def predict_lap_time(request: Request):
         weather_data = pd.DataFrame([predict_data["WeatherData"]])
         feature = lap_data_collector.get_feature_by_data_frame(laps_data, weather_data)
         label = pd.DataFrame([predict_data["LapTime"]])
+        
         context.test_df(feature, label, model_creator, logger)
         
         log = logger.get_str()
@@ -80,11 +81,26 @@ async def choice_random_lap_time_predict():
     logger.clear_log()
     return JSONResponse({"success": True, "result": log})
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def sanitize_json(obj):
     return {
         k: (None if isinstance(v, float) and np.isnan(v) else v) for k, v in obj.items()
     }
-
 
 @router.websocket("/check_file")
 async def check_file(web_socket: WebSocket):
