@@ -3,6 +3,8 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from .response_data import router
 
+# 루트 폴더로 이동후
+# uvicorn Users.project.src.server.main:app --reload --port=8096 --host=0.0.0.0
 app = FastAPI()
 
 # 🔧 CORS 미들웨어 추가

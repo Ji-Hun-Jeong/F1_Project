@@ -1,23 +1,84 @@
 import asyncio
-import random
 import time
 from fastapi import APIRouter, WebSocket
+from fastapi.responses import JSONResponse
 import pandas as pd
 from pandas import DataFrame
-import json
 import os
+import torch
 import numpy as np
-
+from random import Random
+from fastapi import Request
+from Users.project.src.base.logger import ConsoleLogger, SaveLogger
 from Users.project.src.data_container.data_container import AzureStorageAccess
+from Users.project.src.deep_learning_pipeline.context import Context
+from Users.project.src.deep_learning_pipeline.model_creator import ModelManager
+from Users.project.src.deep_learning_pipeline.scaler_manager import ScalerManager
+from Users.project.src.predict_lab_time_module.all_track_model import SimpleModel_64_Hidden_2_Creator
+from Users.project.src.predict_lab_time_module.lap_data_collector import LapDataCollector, arrange_feature_and_label_has_nan
+from Users.project.src.data_container.data_container import AzureStorageAccess
+
 
 router = APIRouter()
 data_access = AzureStorageAccess()
 
-@router.post("/predict_lap_time")
-async def predict_lap_time(predict_data: dict):
-    print(predict_data)
-    return {"message": predict_data}
+best_model_path = os.path.join("Users", "project", "model", "lap_time_predict", "best_checkpoint.pth")
+scaler_save_path = os.path.join("Users", "project", "model", "lap_time_predict", "best_scaler.joblib")
+model_manager = ModelManager(best_model_path)
+scaler_manager = ScalerManager(scaler_save_path)
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+context = Context(device, model_manager, scaler_manager)
+
+lap_data_collector = LapDataCollector()
+model_creator = SimpleModel_64_Hidden_2_Creator()
+logger = SaveLogger()
+
+@router.post("/predict_lap_time")
+async def predict_lap_time(request: Request):
+    predict_data = await request.json()
+    
+    car_data = pd.DataFrame([predict_data["CarData"]])
+    lap_data_collector.add_car_data(car_data)
+    if predict_data["IsLapChange"] == True:
+        laps_data = pd.DataFrame([predict_data["LapData"]])
+        weather_data = pd.DataFrame([predict_data["WeatherData"]])
+        feature = lap_data_collector.get_feature_by_data_frame(laps_data, weather_data)
+        label = pd.DataFrame([predict_data["LapTime"]])
+        context.test_df(feature, label, model_creator, logger)
+        
+        log = logger.get_str()
+        logger.clear_log()
+        return JSONResponse({"success": True, "result": log})
+    else:
+        return JSONResponse({"success": True})
+    
+@router.post("/choice_random_lap_time_predict")
+async def choice_random_lap_time_predict():
+    correct_game_file_path = os.path.join("Users", "project", "correct_file", "correct_game")
+    game_list = []
+    with open(correct_game_file_path, "r", encoding="utf-8") as file:
+        for f in file.readlines():
+            game_list.append(f)
+    rand = Random()
+    game = rand.choice(game_list)
+    game = game.replace("\n", "")
+    data_access = AzureStorageAccess()
+
+    car_data_file = game + "car_data_all.csv"
+    laps_file = game + "laps.csv"
+    weather_file = game[0 : -4] + "weather_data.csv"
+
+    car_data = data_access.get_file_by_data_frame(car_data_file)
+    laps_data = data_access.get_file_by_data_frame(laps_file)
+    weather_data = data_access.get_file_by_data_frame(weather_file)
+
+    feature, label = arrange_feature_and_label_has_nan(car_data, laps_data, weather_data)
+
+    context.test_df(feature, label, model_creator, logger)
+    log = logger.get_str()
+    logger.clear_log()
+    return JSONResponse({"success": True, "result": log})
 
 def sanitize_json(obj):
     return {

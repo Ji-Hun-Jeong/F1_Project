@@ -196,7 +196,7 @@ class Context:
                 count_025 += 1
             if 0.1 < diff:
                 count_01 += 1
-        logger.println(f"행: {idx}, 최댓값: {max}, 0.5이상: {count_05}, 0.25이상: {count_025}, 0.1이상: {count_01}")
+        logger.println(f"행: {idx+1}, 최댓값: {max}, 0.5이상: {count_05}, 0.25이상: {count_025}, 0.1이상: {count_01}")
         logger.println(str(model))
         
         
@@ -246,5 +246,4 @@ class Context:
                 count_025 += 1
             if 0.1 < diff:
                 count_01 += 1
-        logger.println(f"행: {idx}, 최댓값: {max}, 0.5이상: {count_05}, 0.25이상: {count_025}, 0.1이상: {count_01}")
-        logger.println(str(model))
+        logger.println(f"행: {idx+1}, 최댓값: {max}, 0.5이상: {count_05}, 0.25이상: {count_025}, 0.1이상: {count_01}")
