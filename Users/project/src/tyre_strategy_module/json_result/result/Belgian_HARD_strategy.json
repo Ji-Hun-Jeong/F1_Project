@@ -1,0 +1,25 @@
+{
+  "track_name": "Belgian",
+  "initial_compound": "HARD",
+  "total_laps": 44,
+  "estimated_race_time_seconds": 4841.533560000347,
+  "estimated_race_time_minutes": 80.69,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 30 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 30,
+      "stint_length": 30
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 31,
+      "end_lap": 44,
+      "stint_length": 14
+    }
+  ]
+}

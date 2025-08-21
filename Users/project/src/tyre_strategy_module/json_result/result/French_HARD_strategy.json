@@ -1,0 +1,25 @@
+{
+  "track_name": "French",
+  "initial_compound": "HARD",
+  "total_laps": 53,
+  "estimated_race_time_seconds": 5216.165502518407,
+  "estimated_race_time_minutes": 86.94,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 27 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 27,
+      "stint_length": 27
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 28,
+      "end_lap": 53,
+      "stint_length": 26
+    }
+  ]
+}

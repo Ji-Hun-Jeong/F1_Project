@@ -1,0 +1,25 @@
+{
+  "track_name": "United_States",
+  "initial_compound": "SOFT",
+  "total_laps": 56,
+  "estimated_race_time_seconds": 5785.972332367832,
+  "estimated_race_time_minutes": 96.43,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 28 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 28,
+      "stint_length": 28
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 29,
+      "end_lap": 56,
+      "stint_length": 28
+    }
+  ]
+}

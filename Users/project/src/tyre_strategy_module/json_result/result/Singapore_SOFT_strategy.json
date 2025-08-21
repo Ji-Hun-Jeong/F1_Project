@@ -1,0 +1,25 @@
+{
+  "track_name": "Singapore",
+  "initial_compound": "SOFT",
+  "total_laps": 62,
+  "estimated_race_time_seconds": 6298.568826097514,
+  "estimated_race_time_minutes": 104.98,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 15 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 15,
+      "stint_length": 15
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 16,
+      "end_lap": 62,
+      "stint_length": 47
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "track_name": "Japanese",
+  "initial_compound": "SOFT",
+  "total_laps": 53,
+  "estimated_race_time_seconds": 5154.27320657405,
+  "estimated_race_time_minutes": 85.9,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 21 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 21,
+      "stint_length": 21
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 22,
+      "end_lap": 53,
+      "stint_length": 32
+    }
+  ]
+}

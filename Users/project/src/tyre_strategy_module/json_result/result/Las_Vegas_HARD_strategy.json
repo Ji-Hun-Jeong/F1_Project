@@ -1,0 +1,25 @@
+{
+  "track_name": "Las_Vegas",
+  "initial_compound": "HARD",
+  "total_laps": 50,
+  "estimated_race_time_seconds": 5038.401025410924,
+  "estimated_race_time_minutes": 83.97,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 25 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 25,
+      "stint_length": 25
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 26,
+      "end_lap": 50,
+      "stint_length": 25
+    }
+  ]
+}

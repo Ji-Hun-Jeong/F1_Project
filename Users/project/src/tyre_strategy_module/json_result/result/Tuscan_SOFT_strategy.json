@@ -1,0 +1,32 @@
+{
+  "track_name": "Tuscan",
+  "initial_compound": "SOFT",
+  "total_laps": 59,
+  "estimated_race_time_seconds": 5112.046165032671,
+  "estimated_race_time_minutes": 85.2,
+  "total_pit_stops": 2,
+  "strategy_summary": "Start with SOFT -> Lap 11 PIT to HARD -> Lap 27 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 11,
+      "stint_length": 11
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 12,
+      "end_lap": 27,
+      "stint_length": 16
+    },
+    {
+      "stint_number": 3,
+      "compound": "HARD",
+      "start_lap": 28,
+      "end_lap": 59,
+      "stint_length": 32
+    }
+  ]
+}

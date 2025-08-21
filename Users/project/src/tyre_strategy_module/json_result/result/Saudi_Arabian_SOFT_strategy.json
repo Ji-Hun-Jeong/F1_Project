@@ -1,0 +1,25 @@
+{
+  "track_name": "Saudi_Arabian",
+  "initial_compound": "SOFT",
+  "total_laps": 50,
+  "estimated_race_time_seconds": 5008.792311854313,
+  "estimated_race_time_minutes": 83.48,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with SOFT -> Lap 19 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 19,
+      "stint_length": 19
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 20,
+      "end_lap": 50,
+      "stint_length": 31
+    }
+  ]
+}

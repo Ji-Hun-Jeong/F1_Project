@@ -2,67 +2,86 @@
   "metadata": {
     "track": "Emilia_Romagna",
     "version": "2.0",
-    "description": "Emilia_Romagna GP F1 strategy simulation parameters with Dry/Wet separation.",
-    "created_at": "2025-08-19T05:23:52.078801"
+    "total_laps": 63,
+    "created_at": "2025-08-20T03:22:37.518630"
+  },
+  "feature_medians": {
+    "LapNumber": 31.0,
+    "Stint": 2.0,
+    "SpeedI1": 214.125,
+    "SpeedI2": 253.0,
+    "SpeedFL": 276.0,
+    "SpeedST": 285.0,
+    "TyreLife": 14.0,
+    "Position": 10.0,
+    "TrackTemp": 23.1,
+    "AirTemp": 18.3,
+    "Humidity": 66.9,
+    "Pressure": 1009.6,
+    "WindDirection": 103.0,
+    "WindSpeed": 1.8,
+    "LapTime_Delta": -0.03900000000000148,
+    "SpeedI1_Delta": 0.6666666666666572,
+    "TyreWear_Rate": -0.030303030303030304,
+    "TyreWear": 30.0,
+    "Rainfall": 0.0
   },
   "dry_strategy_params": {
-    "description": "Parameters for when Rainfall is 0. Uses ML-based predictions.",
     "ml_hyper_parameters": {
-      "n_estimators": 299,
-      "max_depth": 7,
-      "learning_rate": 0.02138066466781694,
-      "subsample": 0.6055363185003262,
-      "colsample_bytree": 0.8613551119789418,
-      "gamma": 4.561686336173388,
-      "reg_alpha": 0.6460465632222234,
-      "reg_lambda": 0.5177874189524052,
-      "scale_pos_weight": 4.765570122757712
+      "n_estimators": 495,
+      "max_depth": 8,
+      "learning_rate": 0.09607816923877666,
+      "subsample": 0.7229830783378257,
+      "colsample_bytree": 0.8307557430756051,
+      "gamma": 1.6594793090206883,
+      "reg_alpha": 0.22966933863496208,
+      "reg_lambda": 0.8025459088610516,
+      "scale_pos_weight": 4.755532202997936
     },
-    "pit_proba_threshold": 0.3248816728591919,
+    "pit_proba_threshold": 0.17375117540359497,
     "TyreLife_threshold": 22.0,
+    "compound_choice_thresholds": {
+      "t1": 17.0,
+      "t2": 46,
+      "t3": 11,
+      "accuracy": 0.79
+    },
     "pit_stop_time": 31.322807407407407,
     "compound_performance": {
       "SOFT": {
         "base_pace": 1.0,
-        "degradation_rate": 0.06879055648267544,
-        "optimal_stint": 19,
-        "min_stint": 8,
-        "temp_threshold": 39.038888888888884
+        "degradation_rate": 0.035,
+        "optimal_stint": 21,
+        "min_stint": 8
       },
       "MEDIUM": {
         "base_pace": 0.98,
-        "degradation_rate": 0.04254555062520198,
-        "optimal_stint": 22,
-        "min_stint": 8,
-        "temp_threshold": 34.449999999999996
+        "degradation_rate": 0.022,
+        "optimal_stint": 24,
+        "min_stint": 8
       },
       "HARD": {
         "base_pace": 0.96,
-        "degradation_rate": 0.03357536329964401,
-        "optimal_stint": 23,
-        "min_stint": 8,
-        "temp_threshold": 39.038888888888884
+        "degradation_rate": 0.013,
+        "optimal_stint": 29,
+        "min_stint": 8
       }
     }
   },
   "wet_strategy_params": {
-    "description": "Parameters for when Rainfall is 1. Uses rule-based logic.",
-    "strategy_rule": "When rainfall begins, recommend immediate pit for INTERMEDIATE tires.",
     "pit_stop_time": 38.145,
     "compound_performance": {
       "INTERMEDIATE": {
         "base_pace": 0.85,
-        "degradation_rate": 0.08,
+        "degradation_rate": 0.045,
         "optimal_stint": 20,
-        "min_stint": 5,
-        "temp_threshold": 18.2
+        "min_stint": 5
       },
       "WET": {
         "base_pace": 0.75,
         "degradation_rate": 0.08,
         "optimal_stint": 12,
-        "min_stint": 5,
-        "temp_threshold": 26.4
+        "min_stint": 5
       }
     }
   }

@@ -1,0 +1,25 @@
+{
+  "track_name": "Tuscan",
+  "initial_compound": "HARD",
+  "total_laps": 59,
+  "estimated_race_time_seconds": 5064.429792936915,
+  "estimated_race_time_minutes": 84.41,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 30 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 30,
+      "stint_length": 30
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 31,
+      "end_lap": 59,
+      "stint_length": 29
+    }
+  ]
+}

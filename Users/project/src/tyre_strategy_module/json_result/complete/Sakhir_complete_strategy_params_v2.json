@@ -2,67 +2,86 @@
   "metadata": {
     "track": "Sakhir",
     "version": "2.0",
-    "description": "Sakhir GP F1 strategy simulation parameters with Dry/Wet separation.",
-    "created_at": "2025-08-13T08:16:52.760247"
+    "total_laps": 57,
+    "created_at": "2025-08-20T08:33:29.283273"
+  },
+  "feature_medians": {
+    "LapNumber": 32.0,
+    "Stint": 2.0,
+    "SpeedI1": 266.0,
+    "SpeedI2": 256.0,
+    "SpeedFL": 276.0,
+    "SpeedST": 304.0,
+    "TyreLife": 14.0,
+    "Position": 10.0,
+    "TrackTemp": 47.9,
+    "AirTemp": 30.0,
+    "Humidity": 56.2,
+    "Pressure": 997.7,
+    "WindDirection": 194.0,
+    "WindSpeed": 1.5,
+    "LapTime_Delta": 0.0,
+    "SpeedI1_Delta": 0.6666666666666572,
+    "TyreWear_Rate": -0.02857142857142857,
+    "TyreWear": 13.0,
+    "Rainfall": 0.0
   },
   "dry_strategy_params": {
-    "description": "Parameters for when Rainfall is 0. Uses ML-based predictions.",
     "ml_hyper_parameters": {
-      "n_estimators": 358,
-      "max_depth": 10,
-      "learning_rate": 0.16450690309937221,
-      "subsample": 0.6240552983395773,
-      "colsample_bytree": 0.8934062627498695,
-      "gamma": 2.881957321927198,
-      "reg_alpha": 0.6871185813748696,
-      "reg_lambda": 0.5634961444414684,
-      "scale_pos_weight": 3.7098346742827797
+      "n_estimators": 255,
+      "max_depth": 6,
+      "learning_rate": 0.15091617286098227,
+      "subsample": 0.7321696109009291,
+      "colsample_bytree": 0.6157215058854282,
+      "gamma": 0.9001597260758726,
+      "reg_alpha": 0.6004380342809701,
+      "reg_lambda": 0.43041847756190965,
+      "scale_pos_weight": 4.710959422252595
     },
-    "pit_proba_threshold": 0.2551419734954834,
+    "pit_proba_threshold": 0.6812759637832642,
     "TyreLife_threshold": 20.0,
-    "pit_stop_time": 22.34757142857143,
+    "compound_choice_thresholds": {
+      "t1": 15.0,
+      "t2": 17,
+      "t3": 2,
+      "accuracy": 0.06
+    },
+    "pit_stop_time": 22.347571428571424,
     "compound_performance": {
       "SOFT": {
         "base_pace": 1.0,
-        "degradation_rate": 0.08,
-        "optimal_stint": 19,
-        "min_stint": 8,
-        "temp_threshold": 31.211111111111112
+        "degradation_rate": 0.035,
+        "optimal_stint": 20,
+        "min_stint": 8
       },
       "MEDIUM": {
         "base_pace": 0.98,
-        "degradation_rate": 0.0721298511414688,
-        "optimal_stint": 20,
-        "min_stint": 8,
-        "temp_threshold": 31.211111111111112
+        "degradation_rate": 0.022,
+        "optimal_stint": 21,
+        "min_stint": 8
       },
       "HARD": {
         "base_pace": 0.96,
-        "degradation_rate": 0.05050649203796449,
-        "optimal_stint": 23,
-        "min_stint": 8,
-        "temp_threshold": 27.166666666666668
+        "degradation_rate": 0.013,
+        "optimal_stint": 24,
+        "min_stint": 8
       }
     }
   },
   "wet_strategy_params": {
-    "description": "Parameters for when Rainfall is 1. Uses rule-based logic.",
-    "strategy_rule": "When rainfall begins, recommend immediate pit for INTERMEDIATE tires.",
     "pit_stop_time": 22.0,
     "compound_performance": {
-      "INTERMEDIATE": {
-        "base_pace": 0.85,
-        "degradation_rate": 0.08,
-        "optimal_stint": 20,
-        "min_stint": 5,
-        "temp_threshold": 21.28888888888889
-      },
       "WET": {
         "base_pace": 0.75,
         "degradation_rate": 0.08,
         "optimal_stint": 12,
-        "min_stint": 5,
-        "temp_threshold": 20.645
+        "min_stint": 5
+      },
+      "INTERMEDIATE": {
+        "base_pace": 0.85,
+        "degradation_rate": 0.045,
+        "optimal_stint": 20,
+        "min_stint": 5
       }
     }
   }

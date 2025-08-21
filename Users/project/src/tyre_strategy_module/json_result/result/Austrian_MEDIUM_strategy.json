@@ -1,0 +1,25 @@
+{
+  "track_name": "Austrian",
+  "initial_compound": "MEDIUM",
+  "total_laps": 71,
+  "estimated_race_time_seconds": 5078.881917951777,
+  "estimated_race_time_minutes": 84.65,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with MEDIUM -> Lap 33 PIT to HARD -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 33,
+      "stint_length": 33
+    },
+    {
+      "stint_number": 2,
+      "compound": "HARD",
+      "start_lap": 34,
+      "end_lap": 71,
+      "stint_length": 38
+    }
+  ]
+}

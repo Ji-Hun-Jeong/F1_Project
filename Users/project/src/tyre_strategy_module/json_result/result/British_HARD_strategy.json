@@ -1,0 +1,25 @@
+{
+  "track_name": "British",
+  "initial_compound": "HARD",
+  "total_laps": 52,
+  "estimated_race_time_seconds": 4767.375483210615,
+  "estimated_race_time_minutes": 79.46,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 39 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 39,
+      "stint_length": 39
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 40,
+      "end_lap": 52,
+      "stint_length": 13
+    }
+  ]
+}

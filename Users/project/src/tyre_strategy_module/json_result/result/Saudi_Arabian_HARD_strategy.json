@@ -1,0 +1,25 @@
+{
+  "track_name": "Saudi_Arabian",
+  "initial_compound": "HARD",
+  "total_laps": 50,
+  "estimated_race_time_seconds": 4969.691797990912,
+  "estimated_race_time_minutes": 82.83,
+  "total_pit_stops": 1,
+  "strategy_summary": "Start with HARD -> Lap 24 PIT to MEDIUM -> Finish",
+  "stints": [
+    {
+      "stint_number": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 24,
+      "stint_length": 24
+    },
+    {
+      "stint_number": 2,
+      "compound": "MEDIUM",
+      "start_lap": 25,
+      "end_lap": 50,
+      "stint_length": 26
+    }
+  ]
+}
