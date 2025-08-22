@@ -39,8 +39,6 @@ logger = SaveLogger()
 async def predict_lap_time(request: Request):
     predict_data = await request.json()
 
-    # df = pd.DataFrame(predict_data["CarData"])
-    # df = pd.read_json(predict_data["CarData"])
     car_data = pd.DataFrame([predict_data["CarData"]])
     lap_data_collector.add_car_data(car_data)
     if predict_data["IsLapChange"] == True:
@@ -48,10 +46,10 @@ async def predict_lap_time(request: Request):
             laps_data = pd.DataFrame([predict_data["LapData"]]).iloc[0]
             weather_data = pd.DataFrame([predict_data["WeatherData"]])
             feature = lap_data_collector.get_feature_by_data_frame(laps_data, weather_data)
-            print("Hi")
             label = pd.DataFrame([predict_data["LapTime"]])
+            feature = feature.fillna(0)
 
-            context.test_df(feature, label, model_creator, logger)
+            context.test_one_lap(feature, label, model_creator, logger)
 
             log = logger.get_str()
             logger.clear_log()
