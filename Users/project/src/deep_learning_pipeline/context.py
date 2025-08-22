@@ -207,10 +207,10 @@ class Context:
         y_test = labels.values
         data_scaler = self.scaler_manager.load_scaler()
         x_test = data_scaler.transform(x_test)
-                
+
         x_test_tensor = torch.tensor(x_test, dtype=torch.float32).to(self.device)
         y_test_tensor = torch.tensor(y_test, dtype=torch.float32).view(-1, 1).to(self.device)
-        
+
         in_dim = features.shape[1]
         
         model = model_creator.create_model(in_dim).to(self.device)
@@ -247,3 +247,34 @@ class Context:
             if 0.1 < diff:
                 count_01 += 1
         logger.println(f"행: {idx+1}, 최댓값: {max}, 0.5이상: {count_05}, 0.25이상: {count_025}, 0.1이상: {count_01}")
+
+
+    def test_one_lap(self, features: pd.DataFrame, labels: pd.DataFrame
+                  , model_creator: IModelCreator
+                  , logger: ILogger):
+        x_test = features.values
+        y_test = labels.values
+        data_scaler = self.scaler_manager.load_scaler()
+        x_test = data_scaler.transform(x_test)
+
+        x_test_tensor = torch.tensor(x_test, dtype=torch.float32).to(self.device)
+        y_test_tensor = torch.tensor(y_test, dtype=torch.float32).view(-1, 1).to(self.device)
+
+        in_dim = features.shape[1]
+        
+        model = model_creator.create_model(in_dim).to(self.device)
+        self.model_manager.set_model_state(model, self.device)
+        
+        model.eval()
+        with torch.no_grad():
+            val_outputs = model(x_test_tensor)
+            
+        predictions_array = val_outputs.cpu().numpy()
+        y_predict_array = y_test_tensor.cpu().numpy()
+
+        difference_array = np.abs(predictions_array - y_predict_array)
+
+        pred = predictions_array[0][0]
+        actual = y_predict_array[0][0]
+        diff = difference_array[0][0]
+        logger.println(f"예측값={pred:.4f}, 실제값={actual:.4f}, 차이={diff:.4f}\n")
