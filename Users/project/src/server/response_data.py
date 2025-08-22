@@ -41,13 +41,13 @@ async def predict_lap_time(request: Request):
 
     car_data = pd.DataFrame([predict_data["CarData"]])
     lap_data_collector.add_car_data(car_data)
+    print(lap_data_collector.car_data_frame)
     if predict_data["IsLapChange"] == True:
         try:
             laps_data = pd.DataFrame([predict_data["LapData"]]).iloc[0]
             weather_data = pd.DataFrame([predict_data["WeatherData"]])
             feature = lap_data_collector.get_feature_by_data_frame(laps_data, weather_data)
             label = pd.DataFrame([predict_data["LapTime"]])
-            feature = feature.fillna(0)
 
             context.test_one_lap(feature, label, model_creator, logger)
 
@@ -56,7 +56,10 @@ async def predict_lap_time(request: Request):
         except Exception as e:
             print(e)
             return JSONResponse({"success": False, "error": str(e)})
-        return JSONResponse({"success": False, "result": log})
+        finally:
+            lap_data_collector.clear_car_data()
+            print(lap_data_collector.car_data_frame)
+            return JSONResponse({"success": True, "result": log})
     else:
         return JSONResponse({"success": True})
     

@@ -120,6 +120,9 @@ class LapDataCollector:
         one_lap_features = [int(x) if isinstance(x, (np.int32, np.int64)) else x for x in one_lap_features]
         
         return pd.DataFrame([one_lap_features])
+
+    def clear_car_data(self):
+        self.car_data_frame = pd.DataFrame()
     
     
 def arrange_feature_and_label_has_nan(car_data: pd.DataFrame, laps_data: pd.DataFrame, weather_data: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
